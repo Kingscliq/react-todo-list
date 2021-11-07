@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Montserrat:wght@700&family=Poppins:wght@200;300;700&family=Raleway:wght@300&display=swap');
+
+:root {
+  --primary: #2ebaee;
+  --secondary: #46529d;
+  --tertiary: #d2dfed;
+  --light: #fff;
+  --dark: #333;
+  --lato: 'Lato', sans-serif;
+  --montserrat: 'Montserrat', sans-serif;
+  --poppins: 'Poppins', sans-serif;
+  --raleway: 'Raleway', sans-serif;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+body {
+  background: var(--tertiary);
+  font-family: var(--lato);
+  position: relative;
+}
+
+.main-section {
+  height: auto;
+  width: 800px;
+  background: #f9f9f9;
+  margin: auto;
+}
+
+.todo-header {
+  height: 200px;
+  background: url('./assets/bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.todo-header .todo-header-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 20px;
+  flex-direction: column;
+}
+.todo-header .todo-header-description {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 20px;
+  flex-direction: column;
+}
+.todo-header .todo-header-description .todo-counts {
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+}
+.todo-counts > div {
+  margin-right: 20px;
+}
+
+.todo-body {
+  padding: 20px;
+  position: relative;
+}
+.todo-body h2 {
+  margin: 10px 0;
+}
+.todo-contents {
+  list-style-type: none;
+  width: inherit;
+  margin: auto;
+}
+
+.todo-contents .todo-item-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 20px 35px;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.todo-item-content {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  width: 500px;
+}
+.floating-btn {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background: var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-left: 650px;
+  top: 10px;
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #f4f4f4;
+  border: none;
+  box-shadow: 0 1px 3px rgb(75, 197, 253), 0 1px 2px rgba(146, 146, 146, 0.24);
+  transition: all 0.5s ease-in;
+}
+.floating-btn:hover {
+  opacity: 0.7;
+}
+.floating-btn-container {
+  position: relative;
+  padding: 30px;
+  height: 50px;
+  width: 100%;
+}
+
+.modal {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.4);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.modal-container {
+  padding: 20px;
+  background: var(--secondary);
+  width: 400px;
+}
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0 30px;
+  color: #f4f4f4;
+}
+.modal-container .form-group {
+  margin: 20px 0;
+}
+.modal-container .form-control {
+  padding: 10px 0;
+  border: none;
+  background: transparent;
+  color: var(--light);
+  outline: none;
+  border-bottom: 1px solid rgba(212, 212, 212, 0.418);
+  width: 100%;
+}
+
+.form-control::placeholder {
+  color: rgba(212, 212, 212, 0.418);
+}
+
+select > option {
+  color: var(--primary);
+}
+
+.add-btn {
+  background: var(--primary);
+  color: #f4f4f4;
+  text-align: center;
+  font-size: 1rem;
+  color: #f4f4f4;
+  padding: 10px;
+  border: none;
+  /* box-shadow: 0 1px 3px rgb(75, 197, 253), 0 1px 2px rgba(146, 146, 146, 0.24); */
+  transition: all 0.5s ease-in;
+  width: 100%;
+}
+.back-arrow {
+  cursor: pointer;
+}
+.trash {
+  color: tomato;
+  cursor: pointer;
+  transition: all 0.5s ease-in;
+}
+
+.trash:hover {
+  opacity: 0.7;
+}
+.checkbox {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+.completed {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
